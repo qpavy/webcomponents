@@ -11,7 +11,7 @@ Create a fullpage carousel with background-image, title, description and link.
 - `carousel-url`: The link of the slide
 
 ### Example
-```
+```javascript
 <q-carousel>
     <li carousel-image-url="image.jpg" carousel-title="title" carousel-description="description" carousel-url="http://url"></li>
     <li carousel-image-url="image2.jpg" carousel-title="title2" carousel-description="description2" carousel-url="http://url2"></li>
