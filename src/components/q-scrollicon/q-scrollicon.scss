@@ -1,0 +1,67 @@
+:host {
+  display: block;
+}
+
+$mouse_color: #ffffff;
+$mouse_width: 31px;
+$mouse_height: 52px;
+$border_width: 1px;
+
+@mixin keyframes($animationName) {
+  @-webkit-keyframes #{$animationName} {
+    @content;
+  }
+  @-moz-keyframes #{$animationName} {
+    @content;
+  }
+  @-o-keyframes #{$animationName} {
+    @content;
+  }
+  @keyframes #{$animationName} {
+    @content;
+  }
+}
+
+@mixin animation($animations) {
+  -webkit-animation: $animations;
+  -moz-animation:    $animations;
+  -o-animation:      $animations;
+  animation:         $animations;
+}
+
+$wheel_size: $border_width * 5;
+
+@include keyframes(mouse-scroll) {
+	0%   { top: 10%; opacity: 1; }
+	80% { opacity: 1; }
+	100% { top: 30%; opacity: 0; }
+}
+
+#scroll-container {
+	position: absolute;
+	bottom: 75px;
+	left: 50%;
+	width: $mouse_width + $border_width*2;
+	height: $mouse_height + $border_width*2;
+	margin-top: - ($mouse_height + $border_width * 2) * 0.5;
+	margin-left: - ($mouse_width + $border_width * 2) * 0.5;
+}
+.scroll-inner {
+	width: $mouse_width;
+	height: $mouse_height;
+	position: relative;
+	border-radius: calc($mouse_width/2 + $border_width * 2);
+	border: $border_width solid $mouse_color;
+}
+.scroll-wheel {
+	position: absolute;
+	top: 10%;
+	left: 50%;
+	width: $wheel_size;
+	height: $wheel_size;
+	margin-left: calc($wheel_size/-2);
+	border-radius: 50%;
+	background-color: $mouse_color;
+
+	@include animation(mouse-scroll 1.5s infinite);
+}
