@@ -1,3 +1,8 @@
+# Using qpavy webcomponents
+
+- Put this script tag : `<script type='module' src='https://unpkg.com/qpavy-webcomponents@0.0.1/dist/webcomponents/webcomponents.esm.js'></script>` in the head of your index.html
+- Then you can use the element anywhere in your template, JSX, html etc
+
 # q-carousel
 
 Create a fullpage carousel with background-image, title, description and link.
@@ -28,21 +33,3 @@ Create a fullpage carousel with background-image, title, description and link.
 | Property     | Attribute     | Description | Type      | Default |
 | ------------ | ------------- | ----------- | --------- | ------- |
 | `withScroll` | `with-scroll` |             | `boolean` | `true`  |
-
-
-## Dependencies
-
-### Depends on
-
-- [q-scrollicon](../q-scrollicon)
-
-### Graph
-```mermaid
-graph TD;
-  q-carousel --> q-scrollicon
-  style q-carousel fill:#f9f,stroke:#333,stroke-width:4px
-```
-
-----------------------------------------------
-
-*Built with [StencilJS](https://stenciljs.com/)*

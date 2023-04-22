@@ -9,8 +9,18 @@ export namespace Components {
     interface QCarousel {
         "withScroll": boolean;
     }
+    interface QCarouselItem {
+        "description": string;
+        "image": string;
+        "title": string;
+        "url": string;
+    }
     interface QScrollicon {
     }
+}
+export interface QCarouselItemCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLQCarouselItemElement;
 }
 declare global {
     interface HTMLQCarouselElement extends Components.QCarousel, HTMLStencilElement {
@@ -18,6 +28,12 @@ declare global {
     var HTMLQCarouselElement: {
         prototype: HTMLQCarouselElement;
         new (): HTMLQCarouselElement;
+    };
+    interface HTMLQCarouselItemElement extends Components.QCarouselItem, HTMLStencilElement {
+    }
+    var HTMLQCarouselItemElement: {
+        prototype: HTMLQCarouselItemElement;
+        new (): HTMLQCarouselItemElement;
     };
     interface HTMLQScrolliconElement extends Components.QScrollicon, HTMLStencilElement {
     }
@@ -27,6 +43,7 @@ declare global {
     };
     interface HTMLElementTagNameMap {
         "q-carousel": HTMLQCarouselElement;
+        "q-carousel-item": HTMLQCarouselItemElement;
         "q-scrollicon": HTMLQScrolliconElement;
     }
 }
