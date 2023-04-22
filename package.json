@@ -1,6 +1,6 @@
 {
   "name": "qpavy-webcomponents",
-  "version": "0.0.8",
+  "version": "0.0.6",
   "description": "Stencil Component Starter",
   "main": "dist/index.cjs.js",
   "module": "dist/index.js",
@@ -24,9 +24,9 @@
     "test": "stencil test --spec --e2e",
     "test.watch": "stencil test --spec --e2e --watchAll",
     "generate": "stencil generate",
-    "use.npmreadme": "mv 'readme.md' 'git.readme.md' && mv 'npm.readme.md' 'readme.md'",
-    "use.gitreadme": "mv 'readme.md' 'npm.readme.md' && mv 'git.readme.md' 'readme.md'",
-    "publish": "npm version patch && git stash && mv 'readme.md' 'git.readme.md' && mv 'npm.readme.md' 'readme.md' && npm publish && git stash pop"
+    "use:npmreadme": "mv 'readme.md' 'git.readme.md' && mv 'npm.readme.md' 'readme.md'",
+    "use:gitreadme": "mv 'readme.md' 'npm.readme.md' && mv 'git.readme.md' 'readme.md'",
+    "use:publish": "npm version patch && mv 'readme.md' 'git.readme.md' && mv 'npm.readme.md' 'readme.md' && npm publish && mv 'readme.md' 'npm.readme.md' && mv 'git.readme.md' 'readme.md'"
   },
   "dependencies": {
     "@stencil/core": "^3.0.0"
