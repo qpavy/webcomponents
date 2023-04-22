@@ -1,6 +1,6 @@
 # Using qpavy webcomponents
 
-- Put this script tag : `<script type='module' src='https://unpkg.com/qpavy-webcomponents@0.0.1/dist/webcomponents/webcomponents.esm.js'></script>` in the head of your index.html
+- Put this script tag : `<script type='module' src='https://unpkg.com/qpavy-webcomponents@<LAST_VERSION>/dist/webcomponents/webcomponents.esm.js'></script>` in the head of your index.html
 - Then you can use the element anywhere in your template, JSX, html etc
 
 # q-carousel
