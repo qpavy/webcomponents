@@ -26,7 +26,7 @@
     "generate": "stencil generate",
     "use.npmreadme": "mv 'readme.md' 'git.readme.md' && mv 'npm.readme.md' 'readme.md'",
     "use.gitreadme": "mv 'readme.md' 'npm.readme.md' && mv 'git.readme.md' 'readme.md'",
-    "publish": "mv 'readme.md' 'git.readme.md' && mv 'npm.readme.md' 'readme.md' && npm publish && mv 'readme.md' 'npm.readme.md' && mv 'git.readme.md' 'readme.md'"
+    "publish": "npm version patch && mv 'readme.md' 'git.readme.md' && mv 'npm.readme.md' 'readme.md' && npm publish && mv 'readme.md' 'npm.readme.md' && mv 'git.readme.md' 'readme.md'"
   },
   "dependencies": {
     "@stencil/core": "^3.0.0"
